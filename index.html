@@ -25,21 +25,21 @@
     <div class="grid grid-cols-3 gap-4">
         <div class="bg-[#FFFFFF] rounded-lg  p-5 flex flex-col gap-2">
             <p class="font-medium text-[14px] text-[#323B49]">Total</p>
-            <p class="text-2xl font-bold text-[#002C5C]">0</p>
+            <p id="totalCount" class="text-2xl font-bold text-[#002C5C]">8</p>
         </div>
         <div class="bg-[#FFFFFF] rounded-lg  p-5 flex flex-col gap-2">
             <p class="font-medium text-[14px] text-[#323B49]">Interview</p>
-            <p class="text-2xl font-bold text-[#10B981]">0</p>
+            <p id="interviewCount" class="text-2xl font-bold text-[#10B981]">0</p>
         </div>
         <div class="bg-[#FFFFFF] rounded-lg  p-5 flex flex-col gap-2">
             <p class="font-medium text-[14px] text-[#323B49]">Rejected</p>
-            <p class="text-2xl font-bold text-[#EF4444]">0</p>
+            <p id="rejectedCount" class="text-2xl font-bold text-[#EF4444]">0</p>
         </div>
     </div>
    </header>
    <!-- horizontal line -->
    <hr class="my-8 border-[#E6E7E9] border">
-   <!-- main section -->
+<!-- main section -->
    <main class="w-[80%] mx-auto">
     <div class="flex justify-between mb-6">
         <h2 class="font-semibold text-2xl text-[#002C5C]">Available Jobs</h2>
@@ -47,16 +47,16 @@
     </div>
     <!--main 3 buttons -->
     <div class="mb-4 flex flex-row gap-2">
-        <button class="bg-[#3B82F6] text-[#FFFFFF] font-medium text-[12px] rounded px-8 py-2.5"   >All</button>
-        <button class="bg-[#FFFFFF] text-[#64748B] font-medium text-[12px] rounded px-8 py-2.5" > Interview</button>
-        <button class="bg-[#FFFFFF] text-[#64748B] font-medium text-[12px] rounded px-8 py-2.5" > Rejected</button>
+        <button id="allTab" class="bg-[#3B82F6] text-[#FFFFFF] font-medium text-[12px] rounded px-8 py-2.5" >All</button>
+        <button id="interviewTab" class="bg-[#FFFFFF] text-[#64748B] font-medium text-[12px] rounded px-8 py-2.5" > Interview</button>
+        <button id="rejectedTab" class="bg-[#FFFFFF] text-[#64748B] font-medium text-[12px] rounded px-8 py-2.5" > Rejected</button>
     </div>
-    <!--filtered card  -->
+    
 
     <!-- all card section -->
     <section id="all-cards" class="space-y-2 mb-16">
         <!-- card 1 -->
-        <div class="card flex  justify-between border p-8 rounded-lg bg-[#FFFFFF]">
+        <div class="card flex  justify-between  p-8 rounded-lg bg-[#FFFFFF]">
             <div class="space-y-6">
                 <div>
                     <h2 class="font-semibold text-2xl text-[#002C5C] mb-1">Mobile First Corp</h2>
@@ -76,19 +76,19 @@ Full-time
                 </div>
                 <p class="text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 <div class="flex gap-2">
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#10B981] border border-[#10B981] rounded">interview</button>
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#10B981] border border-[#10B981] rounded">interview</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
                 </div>
             </div>
 
             <div>
-                <button class="p-3 bg-[#FFFFFF] rounded-[50%]"><img src="./images/Trash.png" alt=""></button>
+                <button class="p-3 bg-[#FFFFFF] rounded-[50%] border border-[#F1F2F4]"><img src="./images/Trash.png" alt=""></button>
             </div>
        
         </div>
 
         <!-- card 2 -->
-        <div class="card flex  justify-between border p-8 rounded-lg bg-[#FFFFFF]">
+        <div class="card flex  justify-between  p-8 rounded-lg bg-[#FFFFFF]">
             <div class="space-y-6">
                 <div>
                     <h2 class="font-semibold text-2xl text-[#002C5C] mb-1">WebFlow Agency</h2>
@@ -108,24 +108,18 @@ Part-time
                 </div>
                 <p class="text-[#323B49]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                 <div class="flex gap-2">
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#10B981] border border-[#10B981] rounded">interview</button>
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#10B981] border border-[#10B981] rounded">interview</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
                 </div>
             </div>
-
-
-           
-
-           
-        
        
             <div>
-                <button class="p-3 bg-[#FFFFFF] rounded-[50%]"><img src="./images/Trash.png" alt=""></button>
+                <button class="p-3 bg-[#FFFFFF] rounded-[50%] border border-[#F1F2F4]"><img src="./images/Trash.png" alt=""></button>
             </div>
        
         </div>
         <!-- card 3 -->
-        <div class="card flex  justify-between border p-8 rounded-lg bg-[#FFFFFF]">
+        <div class="card flex  justify-between  p-8 rounded-lg bg-[#FFFFFF]">
             <div class="space-y-6">
                 <div>
                     <h2 class="font-semibold text-2xl text-[#002C5C] mb-1">DataViz Solutions</h2>
@@ -146,24 +140,18 @@ Part-time
                 <p class="text-[#323B49]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
 </p>
                 <div class="flex gap-2">
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#10B981] border border-[#10B981] rounded">interview</button>
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#10B981] border border-[#10B981] rounded">interview</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
                 </div>
             </div>
 
-
-           
-
-           
-        
-       
             <div>
-                <button class="p-3 bg-[#FFFFFF] rounded-[50%]"><img src="./images/Trash.png" alt=""></button>
+                <button class="p-3 bg-[#FFFFFF] rounded-[50%] border border-[#F1F2F4]"><img src="./images/Trash.png" alt=""></button>
             </div>
        
         </div>
         <!-- card 4 -->
-        <div class="card flex  justify-between border p-8 rounded-lg bg-[#FFFFFF]">
+        <div class="card flex  justify-between  p-8 rounded-lg bg-[#FFFFFF]">
             <div class="space-y-6">
                 <div>
                     <h2 class="font-semibold text-2xl text-[#002C5C] mb-1">CloudFirst Inc</h2>
@@ -183,24 +171,18 @@ Part-time
                 </div>
                 <p class="text-[#323B49]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                 <div class="flex gap-2">
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#10B981] border border-[#10B981] rounded">interview</button>
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#10B981] border border-[#10B981] rounded">interview</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
                 </div>
             </div>
 
-
-           
-
-           
-        
-       
             <div>
-                <button class="p-3 bg-[#FFFFFF] rounded-[50%]"><img src="./images/Trash.png" alt=""></button>
+                <button class="p-3 bg-[#FFFFFF] rounded-[50%] border border-[#F1F2F4]"><img src="./images/Trash.png" alt=""></button>
             </div>
        
         </div>
         <!-- card 5 -->
-        <div class="card flex  justify-between border p-8 rounded-lg bg-[#FFFFFF]">
+        <div class="card flex  justify-between  p-8 rounded-lg bg-[#FFFFFF]">
             <div class="space-y-6">
                 <div>
                     <h2 class="font-semibold text-2xl text-[#002C5C] mb-1">Innovation Labs</h2>
@@ -220,24 +202,18 @@ Part-time
                 </div>
                 <p class="text-[#323B49]">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                 <div class="flex gap-2">
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#10B981] border border-[#10B981] rounded">interview</button>
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#10B981] border border-[#10B981] rounded">interview</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
                 </div>
             </div>
 
-
-           
-
-           
-        
-       
             <div>
-                <button class="p-3 bg-[#FFFFFF] rounded-[50%]"><img src="./images/Trash.png" alt=""></button>
+                <button class="p-3 bg-[#FFFFFF] rounded-[50%] border border-[#F1F2F4]"><img src="./images/Trash.png" alt=""></button>
             </div>
        
         </div>
         <!-- card 6 -->
-        <div class="card flex  justify-between border p-8 rounded-lg bg-[#FFFFFF]">
+        <div class="card flex  justify-between  p-8 rounded-lg bg-[#FFFFFF]">
             <div class="space-y-6">
                 <div>
                     <h2 class="font-semibold text-2xl text-[#002C5C] mb-1">MegaCorp Solutions</h2>
@@ -257,24 +233,18 @@ Full-time
                 </div>
                 <p class="text-[#323B49]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                 <div class="flex gap-2">
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#10B981] border border-[#10B981] rounded">interview</button>
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#10B981] border border-[#10B981] rounded">interview</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
                 </div>
             </div>
 
-
-           
-
-           
-        
-       
             <div>
-                <button class="p-3 bg-[#FFFFFF] rounded-[50%]"><img src="./images/Trash.png" alt=""></button>
+                <button class="p-3 bg-[#FFFFFF] rounded-[50%] border border-[#F1F2F4]"><img src="./images/Trash.png" alt=""></button>
             </div>
        
         </div>
         <!-- card 7 -->
-        <div class="card flex  justify-between border p-8 rounded-lg bg-[#FFFFFF]">
+        <div class="card flex  justify-between  p-8 rounded-lg bg-[#FFFFFF]">
             <div class="space-y-6">
                 <div>
                     <h2 class="font-semibold text-2xl text-[#002C5C] mb-1">StartupXYZ</h2>
@@ -294,24 +264,18 @@ Full-time
                 </div>
                 <p class="text-[#323B49]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                 <div class="flex gap-2">
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#10B981] border border-[#10B981] rounded">interview</button>
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#10B981] border border-[#10B981] rounded">interview</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
                 </div>
             </div>
 
-
-           
-
-           
-        
-       
             <div>
-                <button class="p-3 bg-[#FFFFFF] rounded-[50%]"><img src="./images/Trash.png" alt=""></button>
+                <button class="p-3 bg-[#FFFFFF] rounded-[50%] border border-[#F1F2F4]"><img src="./images/Trash.png" alt=""></button>
             </div>
        
         </div>
         <!-- card 8 -->
-        <div class="card flex  justify-between border p-8 rounded-lg bg-[#FFFFFF]">
+        <div class="card flex  justify-between p-8 rounded-lg bg-[#FFFFFF]">
             <div class="space-y-6">
                 <div>
                     <h2 class="font-semibold text-2xl text-[#002C5C] mb-1">TechCorp Industries</h2>
@@ -331,13 +295,13 @@ Full-time
                 </div>
                 <p class="text-[#323B49]">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                 <div class="flex gap-2">
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#10B981] border border-[#10B981] rounded">interview</button>
-                    <button class="px-3 py-2 bg-[#EEF4FF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#10B981] border border-[#10B981] rounded">interview</button>
+                    <button class="px-3 py-2 bg-[#FFFFFF] text-[#EF4444] border border-[#EF4444] rounded">Rejected</button>
                 </div>
             </div>
 
             <div>
-                <button class="p-3 bg-[#FFFFFF] rounded-[50%]"><img src="./images/Trash.png" alt=""></button>
+                <button class="p-3 bg-[#FFFFFF] rounded-[50%] border border-[#F1F2F4]"><img src="./images/Trash.png" alt=""></button>
             </div>
        
         </div>
@@ -346,7 +310,35 @@ Full-time
 
     </section>
 
+<!-- interview  card section -->
+     <section id="interview-cards" class="hidden  mb-6" >
+        <div class="no-jobs space-y-3 flex flex-col justify-center rounded-lg items-center px-6 py-[111px] bg-[#FFFFFF]" >
+            <div>
+                <img src="./images/jobs.png" alt="">
+            </div>
+            <div class="flex flex-col items-center">
+            <h2 class="text-[#002C5C] font-semibold text-2xl">No jobs available</h2>
+            <p class="text-[#64748B] font-normal text-[16px]">Check back soon for new job opportunities</p>
+            </div>
+        </div>
+
+     </section>
+<!-- rejected card section -->
+     <section id="rejected-cards" class="hidden  mb-6"  >
+        <div class="no-jobs space-y-3 flex flex-col justify-center rounded-lg items-center px-6 py-[111px] bg-[#FFFFFF]" >
+            <div>
+                <img src="./images/jobs.png" alt="">
+            </div>
+            <div class="flex flex-col items-center">
+            <h2 class="text-[#002C5C] font-semibold text-2xl">No jobs available</h2>
+            <p class="text-[#64748B] font-normal text-[16px]">Check back soon for new job opportunities</p>
+            </div>
+        </div>
+
+     </section>
+
    </main>
+   <script src="./script.js"></script>
     
 </body>
 </html>
