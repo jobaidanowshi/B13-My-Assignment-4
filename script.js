@@ -22,7 +22,7 @@ const interviewCards = document.getElementById('interview-cards');
 const rejectedCards = document.getElementById('rejected-cards');
 
 
-
+const cards = document.querySelectorAll(".card");
 
 
 // tab button clicking
@@ -66,4 +66,58 @@ function showSection (type){
          rejectedTab.classList.add("bg-[#3B82F6]", "text-[#FFFFFF]");
 
     }
+}
+
+// for moving card 
+
+cards.forEach(card => {
+    
+    const interviewBtn = card.querySelector(".interview-btn");
+    const rejectBtn = card.querySelector(".rejected-btn");
+    const deleteBtn = card.querySelector(".delete-btn");
+
+     interviewBtn.onclick = () => {
+        moveCard(card,"interview");
+     };
+
+     rejectBtn.onclick = () => {
+        moveCard(card,"rejected");
+     };
+     
+  deleteBtn.onclick = () =>{
+    deleteCard(card);
+  };
+
+})
+
+function moveCard(card,type){
+    card.dataset.status = type;
+    const statusBtn = card.querySelector(".status-btn");
+    if(type ==="interview"){
+        interviewCards.appendChild(card);
+        
+
+    }else{
+        rejectedCards.appendChild(card);
+        
+    }
+    updateCounts();
+    updateEmptyState();
+}
+// delete card function
+function deleteCard(card){
+    card.remove()
+    updateCounts()
+}
+// update count
+function updateCounts(){
+ const all = document.querySelectorAll(".card").length;
+ const interview = interviewCards.querySelectorAll(".card").length;
+ const rejected = rejectedCards.querySelectorAll(".card").length;
+ 
+
+ totalCount.innerText = all ;
+  
+  interviewCount.innerText = interview;
+  rejectedCount.innerText = rejected;
 }
